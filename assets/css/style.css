@@ -1,0 +1,284 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+.wrapper{
+    background-image:  url('../../images/overlay.png'), url('../../images/desert.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hamburger{
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    top: 4%;
+    right: 4%;
+    font-size: .8rem;
+    color: white;
+    text-shadow: 2px 2px 3px rgb(43, 46, 6);
+}
+
+.hamburger i{
+    margin-top: 2px;
+}
+
+.hamburger p{
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 6px;
+}
+
+
+
+
+.mainHeader{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    /* padding: 3%; */
+}
+
+.mainHeader .headerTitle{
+    letter-spacing: 0.08em;
+    position: absolute;
+    width: 100%;
+    bottom: 10%;
+    text-align: center;
+    line-height: 1.1;
+    color: white;
+    padding: 0 3%;
+    text-shadow: 2px 2px 3px rgb(43, 46, 6);
+
+    animation: headerTextAnimation 1s linear both;
+}
+
+.mainHeader .headerTitle h1{
+    font-weight: 900;
+    font-size: 3.2rem;
+    text-transform: uppercase;
+}
+
+.mainHeader .headerTitle h2{
+    font-weight: 400;
+    font-style: italic;
+    font-family: serif;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+@keyframes backgroundImageChange{
+    from{
+        opacity:1;
+    }
+    to{
+        opacity: 0;
+    }
+}
+
+@keyframes headerTextAnimation{
+    0%{
+        bottom: 2%;
+        opacity: 0;
+    }
+    100%{
+        bottom: 10%;
+        opacity: 1;
+    }
+}
+
+main article{
+    background-color: white;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+     padding-left: 3%;
+    padding-right: 3%;
+    letter-spacing: 2px;  
+     align-items: center;
+     justify-content: space-around;
+    flex-basis: 20%;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgb(192, 192, 192, .2);
+}
+
+main article p.date{
+    font-family: "Merriweather", Georgia, serif;
+    font-weight: 300;
+    font-size: 0.8rem;
+    color: rgb(61, 61, 61);
+    width: 100%;
+    text-align: center;
+}
+
+main article h1{
+    text-transform: uppercase;
+    font-size: 2.1rem;
+    font-weight: 900;
+    text-align: center;
+    color: #212931;
+}
+
+main article h3{
+    font-style: italic;
+    font-weight: 300;
+    font-size: 0.8rem;
+    line-height: 2;
+    text-align: center;
+}
+
+main article img{
+    width: 90%;
+    flex-basis: 10%;
+    /* display: flex; */
+}
+
+
+main article p.button{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+    font-weight: 900;
+    font-size: 0.7rem;
+}
+
+main article p.button span{
+    text-transform: uppercase;
+    border: 2px solid black;
+    padding: 15px;
+}
+
+main article.sideArticle h1{
+    font-size: 1.7rem;
+}
+
+
+main article.sideArticle h3{
+    text-align: justify;
+    display: block;
+    width: 90%;
+    font-style: normal;
+}
+
+section.next{
+    background-color: #fff;
+    height: 15vh;
+    text-align: center;
+    position: relative;
+}
+
+section.next div.next{
+    border: 2px solid rgb(192, 192, 192, .2);
+    padding: 15px 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: rgb(56, 56, 56);
+}
+
+section.next div.next i{
+    padding-left: 8px;
+    /* font-size: 0.6rem; */
+}
+
+
+
+/* footer  */
+
+footer{
+    background-color: rgb(250, 245, 245);
+    color: #5e656b;
+}
+
+div.fields{
+
+    min-height: 80vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+}
+
+div.field{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: right;
+    text-transform: uppercase;
+    font-size: 0.7rem;
+    font-weight: 900;
+    /* color: rgb(56, 56, 56); */
+    
+}
+
+div.field input{
+    width: 100%;
+    flex-basis: 40px;
+    border: 2px solid rgb(192, 192, 192, .2);
+    background-color: rgb(250, 245, 245);
+}
+div.field label{
+  padding-bottom: 6px;
+}
+
+
+div.field.message input{
+    flex-basis: 120px;
+}
+
+div.fields input.sendMessage{
+ background-color: rgb(250, 245, 245);
+ width: 80%;
+ font-weight: 900;
+font-size: 0.7rem;
+text-transform: uppercase;
+border: 2px solid #717981;
+padding: 15px;
+font-family: 'Roboto', sans-serif;
+letter-spacing: 2px;
+}
+
+footer section.contact{
+    height: 60vh;
+    display: flex;
+    font-size: 0.9rem;
+    flex-direction: column;
+}
+
+footer section.contact section{
+    display: flex;
+    border: 2px solid rgb(192, 192, 192, .2);
+    flex-basis: 25%;
+    align-items: center;
+    padding-left: 10%;
+}
+
+footer section.contact section h4{
+    flex-basis: 25%;
+    text-transform: uppercase;
+ 
+}
+
+footer section.contact section p i{
+    font-size: 1.5rem;
+    margin-right: 25px;
+}
+section.copyrights{
+    height: 15vh;
+    background: transparent;
+}
