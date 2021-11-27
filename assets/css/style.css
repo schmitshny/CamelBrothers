@@ -15,27 +15,135 @@ body{
     background-attachment: fixed;
 }
 
+a{
+    text-decoration: none;
+    color: #212931;
+    cursor: pointer;
+    display: block;
+}
+
+a:hover{
+    color: #18bfef !important;
+    border-color:#18bfef !important; 
+}
+
 .hamburger{
     position: fixed;
-    z-index: 1;
     display: flex;
-    top: 4%;
-    right: 4%;
+    top: 2%;
+    right: 2%;
     font-size: .8rem;
     color: white;
-    text-shadow: 2px 2px 3px rgb(43, 46, 6);
+    z-index: 1000;
+    cursor: pointer;
+    padding: 0.45rem 1rem;
+}
+
+.hamburger.background{
+   box-shadow:0 0.125rem 0.75rem 0 rgb(30 37 45 / 25%);
+   background-color:rgba(255, 255, 255, 0.875);
+   color: black;
 }
 
 .hamburger i{
     margin-top: 2px;
+    display: none;
 }
+.hamburger i.active{
+    display: block;
+}
+
 
 .hamburger p{
     text-transform: uppercase;
     font-weight: bold;
     margin-left: 6px;
+    display: none;
 }
 
+.hamburger p.active{
+    display: block;
+}
+
+
+
+
+/* menu */
+
+aside.menu{
+    position: fixed;
+    background-color: white;
+    height: 100vh;
+    width: 70vw;
+    top: 0;
+    right: -70vw;
+    transition: .6s;
+    z-index: 1;
+}
+
+aside.menu div.close{
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    font-size: 1.1rem;
+    color: rgb(143, 143, 143);;
+}
+
+aside.menu.active{
+    right: 0;
+}
+
+aside.menu ul{
+    list-style: none;
+    text-transform: uppercase;
+    font-weight:900;
+    font-size: 0.9rem;
+    letter-spacing: 0.075em;
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    padding-top: 50px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+aside.menu ul li{
+    flex-basis: 25%;
+    align-items: center;
+    display: flex;
+}
+
+
+
+
+aside.menu ul li:nth-of-type(1),
+aside.menu ul li:nth-of-type(2){
+    border-bottom: 1px solid rgba(182, 184, 185, 0.3);
+}
+
+aside.menu ul li.socials{
+    display: flex;
+}
+aside.menu ul li.socials a{
+
+    display: inline-block;
+    text-align: center;
+    margin-right: 0.7rem;
+}
+li.socials a i{
+    font-size: 1.3rem;
+    /* padding: 3px; */
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid rgba(182, 184, 185, 0.3);
+    border-radius: 50%;
+}
+
+
+/* aside.menu ul li a{
+    color: #414850;
+    text-decoration: none;
+} */
 
 
 
@@ -74,14 +182,6 @@ body{
     line-height: 1.5;
 }
 
-@keyframes backgroundImageChange{
-    from{
-        opacity:1;
-    }
-    to{
-        opacity: 0;
-    }
-}
 
 @keyframes headerTextAnimation{
     0%{
@@ -152,7 +252,7 @@ main article p.button{
     font-size: 0.7rem;
 }
 
-main article p.button span{
+main article p.button a{
     text-transform: uppercase;
     border: 2px solid black;
     padding: 15px;
@@ -260,7 +360,7 @@ footer section.contact{
     flex-direction: column;
 }
 
-footer section.contact section{
+footer section.contact section {
     display: flex;
     border: 2px solid rgb(192, 192, 192, .2);
     flex-basis: 25%;
@@ -272,6 +372,9 @@ footer section.contact section h4{
     flex-basis: 25%;
     text-transform: uppercase;
  
+}
+footer section.contact section:last-child p{
+    display: flex;
 }
 
 footer section.contact section p i{
